@@ -1,11 +1,11 @@
 /*
 * Instituição: EtecVAV - Vasco Antonio Vechiarutti
 *
-* Arquivo: 06ex.cpp
+* Arquivo: 06ex_fixed.cpp
 * Data: 01/05/2026
 * Autor: Felipe Barbosa Santos
-* Descrição: 
-* Ler vários números até que a soma desses números 
+* Descrição:
+* Ler vários números até que a soma desses números
 * seja maior que 100. Exibir a multiplicação dos números lidos.
 */
 
@@ -13,14 +13,19 @@
 using namespace std;
 
 int main() {
-    int num, soma = 0, multi = 1;
+    int number;
+    long long sum = 0, product = 1;
+
     while (true) {
-        cout << "escreva seu numero: ";
-        cin >> num;
-        soma += num;
-        if (soma > 100) {break;}
-        multi *= num;
+        cout << "Enter a number: ";
+        cin >> number;
+
+        sum += number;
+        product *= number; 
+
+        if (sum > 100) {break;}
     }
-    cout << "resultado da mutiplicacao: " << multi;
+
+    cout << "Product of all numbers: " << product << endl;
     return 0;
 }
