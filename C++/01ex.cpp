@@ -1,34 +1,40 @@
 /*
 * Instituição: EtecVAV - Vasco Antonio Vechiarutti
 *
-* Arquivo: 01ex.cpp
-* Data: 23/04/2026
+* Arquivo: 01ex_fixed.cpp
+* Data: 01/05/2026
 * Autor: Felipe Barbosa Santos
-* Descrição: 
+* Descrição:
 * Ler um número inteiro. Verificar e exibir se o número é primo.
+*
 */
 
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    int num, cont = 0;
+int main() {
+    int number;
+    bool prime = true;
 
-    cout << "escreva um numero: " << endl;
-    cin >> num;
+    cout << "Enter a number: ";
+    cin >> number;
 
-    for (int i = 1; i <= num / 2; i++) {
-        if (num % i == 0) {
-            cont++;
-        }
-        
-    }
-    if (cont == 1) {
-        cout << "seu numero é primo";
-    }
+    if (number < 2) {
+        prime = false;
+    } 
     else {
-        cout << "seu numero não é primo";
+        for (int i = 2; i <= number / 2; i++) {
+            if (number % i == 0) {
+                prime = false;
+                break;
+            }
+        }
+    }
+
+    if (prime) {
+        cout << number << " is prime." << endl;
+    } else {
+        cout << number << " is not prime.";
     }
 
     return 0;
