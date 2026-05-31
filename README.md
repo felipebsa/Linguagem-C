@@ -4,7 +4,7 @@ Repository with exercises and practical lessons from the 1st semester of the Sys
 
 ---
 
-## 📁 Structure
+## Structure
 
 ```
 Linguagem-C/
@@ -16,7 +16,7 @@ Linguagem-C/
 
 ---
 
-## 📚 C Lessons
+## C Lessons
 
 | Folder | Content | Topics |
 |--------|---------|--------|
